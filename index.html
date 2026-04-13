@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goal Gear</title>
+</head>
+<body>
+  <h1>⚽ Goal Gear</h1>
+  <button onclick="add('Shin Guards',20)">Shin Guards ($20)</button>
+  <button onclick="add('Gloves',35)">Gloves ($35)</button>
+  <button onclick="add('Cleats',60)">Cleats ($60)</button>
+  <p id="cart">Cart: empty</p>
+  <p id="total">$0</p>
+  <script>
+    var total=0, cart=[];
+    function add(n,p){
+      cart.push(n);
+      total+=p;
+      document.getElementById("cart").innerText=cart.join(", ");
+      document.getElementById("total").innerText="$"+total;
+    }
+  </script>
+</body>
+</html>
